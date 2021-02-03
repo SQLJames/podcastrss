@@ -1,0 +1,97 @@
+Website:
+  URL: demo-podcast
+Show:
+  Required:
+    # The following fields are REQUIRED 
+    # The show title.
+    Title: "Demo Podcast"
+    # Description of podcast. The maximum amount of text allowed for this tag is 4000 characters.
+    # To include links in your description or
+    # rich HTML, adhere to the following
+    # technical guidelines: enclose all
+    # portions of your XML that contain
+    # embedded HTML in a CDATA section to
+    # prevent formatting issues, and to
+    # ensure proper link functionality. For
+    # example:
+    # <![CDATA[
+    # <a
+    # href="http://www.apple.com">Apple</a>
+    # ]]>
+    Description: "This is a Demo podcast I use to rant about the world"
+    # The language spoken on the show.
+    # Because Apple Podcasts is available in
+    # territories around the world, it is
+    # critical to specify the language of a
+    # podcast. Apple Podcasts only supports
+    # values from the ISO 639 list
+    # (two-letter language codes, with some
+    # possible modifiers, such as "en-us").
+    Language: "en-us"
+    # The artwork for the show.
+    # Specify your show artwork by providing
+    # a URL linking to it.
+    # Artwork must be a minimum size of 1400
+    # x 1400 pixels and a maximum size of
+    # 3000 x 3000 pixels, in JPEG or PNG
+    # format, 72 dpi, with appropriate file
+    # extensions (.jpg, .png), and in the RGB
+    # colorspace. 
+    # TODO Make it so that these are just pointing to a local picture
+    # Right now this is required to be a url
+    Image: "https://www.wallpapertip.com/wmimgs/78-782499_beautiful-waterfall-hd-wallpaper-nature-wallpapers-beautiful-waterfall.jpg"
+    # The show category information. For a
+    # complete list of categories and
+    # subcategories, see Apple Podcasts
+    # categories.
+    # https://help.apple.com/itc/podcasts_connect/#/itc9267a2f12
+    Categories: 
+      - Category: "Science"
+        Subcategory: "Nature"
+      - Category: "Science"
+        Subcategory: "Life Sciences"
+    # The podcast parental advisory
+    # information.
+    # The explicit value can be one of the
+    # following:
+    # True. If you specify true, indicating
+    # the presence of explicit content, Apple
+    # Podcasts displays an Explicit parental
+    # advisory graphic for your podcast.
+    # Podcasts containing explicit material
+    # aren’t available in some Apple Podcasts
+    # territories.
+    # False. If you specify false, indicating
+    # that your podcast doesn’t contain
+    # explicit language or adult content,
+    # Apple Podcasts displays a Clean
+    # parental advisory graphic for your
+    # podcast.
+    Explicit: no
+  Recommended:
+    # The website associated with a podcast.
+    Website: "https://www.example.com/"
+    # The group responsible for creating the
+    # show.
+    Author: Doe Company LLC
+    # The podcast owner contact information
+    # Note: The <itunes:owner> tag
+    # information is for administrative
+    # communication about the podcast and
+    # isn’t displayed in Apple Podcasts.
+    # Please make sure the email address is
+    # active and monitored.
+    Owner:
+      Name: John Doe
+      Email: John.Doe@gmail.com
+    # This is not an Itunes recommendation
+    # but a general recommendation. According
+    # to the RSS Advisory Board's Best
+    # Practices Profile, identifying a feed's
+    # URL within the feed makes it more
+    # portable, self-contained, and easier to
+    # cache. For these reasons, a feed should
+    # contain an atom:link used for this
+    # purpose.
+    HostURL: "https://www.example.com/rss.xml"
+
