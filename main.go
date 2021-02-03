@@ -17,8 +17,46 @@ type ProgramConfig struct {
 
 // Podcast single podcast detail
 type Podcast struct {
-	Show ShowDetail `yaml:"Show"`
-	Web  WebDetail  `yaml:"Website"`
+	Show     ShowDetail `yaml:"Show"`
+	Web      WebDetail  `yaml:"Website"`
+	Episodes []Episode  `yaml:"Episodes"`
+}
+
+// RequiredEpisodeDetails Required details about a show
+type RequiredEpisodeDetails struct {
+	Title     string                   `yaml:"Title"`
+	Enclosure RequiredEpisodeEnclosure `yaml:"Enclosure"`
+}
+
+// RequiredEpisodeEnclosure Required details about a show length URL and format
+type RequiredEpisodeEnclosure struct {
+	URL    string `yaml:"URL"`
+	Length string `yaml:"Length"`
+	Type   string `yaml:"Type"`
+}
+
+// RecommendedEpisodeDetails Recommended details about the episode
+type RecommendedEpisodeDetails struct {
+	GUID        string `yaml:"GUID"`
+	PublishDate string `yaml:"PublishDate"`
+	Duration    string `yaml:"Duration"`
+	Link        string `yaml:"Link"`
+	Image       string `yaml:"Image"`
+	Explicit    string `yaml:"Explicit"`
+}
+
+// SituationalEpisodeDetails Situational details about the episode
+type SituationalEpisodeDetails struct {
+	EpisodeNumber string `yaml:"EpisodeNumber"`
+	Season        string `yaml:"Season"`
+	EpisodeType   string `yaml:"EpisodeType"`
+	Block         string `yaml:"Block"`
+}
+
+// Episode Holds the Detail about an Episode
+type Episode struct {
+	Required    RequiredEpisodeDetails    `yaml:"Required"`
+	Recommended RecommendedEpisodeDetails `yaml:"Recommended"`
 }
 
 // WebDetail the details about how the url RSS will be hosted
@@ -42,10 +80,20 @@ type Category struct {
 	Subcategory string `yaml:"Subcategory"`
 }
 
+// SituationalShowDetails the situational details about your
+type SituationalShowDetails struct {
+	Type       string `yaml:"Type"`
+	Copyright  string `yaml:"Copyright"`
+	NewURLFeed string `yaml:"NewURLFeed"`
+	Block      string `yaml:"Block"`
+	Complete   string `yaml:"Complete"`
+}
+
 // ShowDetail is the details about you podcast
 type ShowDetail struct {
 	Required    RequiredShowDetails    `yaml:"Required"`
 	Recommended RecommendedShowDetails `yaml:"Recommended"`
+	Situational SituationalShowDetails `yaml:"Situational"`
 }
 
 // RecommendedShowDetails information recommended by itunes RSS feed
