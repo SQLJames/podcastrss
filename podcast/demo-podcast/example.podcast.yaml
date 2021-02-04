@@ -20,10 +20,9 @@ Show:
     Title: "Demo Podcast"
   Situational: 
     Block: "no"
-    Complete: "no"
-    Copyright: "Copyright 1995-2019 John John Applesee"
+    Copyright: "&#169; 2020 John Appleseed"
     NewURLFeed: ""
-    Type: "Episodic"
+    Type: "episodic"
 Website: 
   URL: demo-podcast
 Episodes: 
@@ -33,8 +32,8 @@ Episodes:
       Explicit: "no"
       GUID: "bd3afbc0-2df7-4e3c-b7f6-2196aca72d3c"
       Image: "https://www.wallpapertip.com/wmimgs/78-782499_beautiful-waterfall-hd-wallpaper-nature-wallpapers-beautiful-waterfall.jpg"
-      Link: "http://www.mypodcast.com/episode-one.html"
-      PublishDate: "Wed, 15 Jun 2021 19:00:00 GMT."
+      Link: "http://www.mypodcast.com/episode-one.html/"
+      PublishDate: "Wed, 27 Jan 2021 19:00:00 GMT"
     Required: 
       Enclosure: 
         Length: "5650889"
@@ -44,7 +43,7 @@ Episodes:
     Situational: 
       Block: "no"
       EpisodeNumber: 1
-      EpisodeType: "Full"
+      EpisodeType: "full"
       Season: 1
   - Recommended: 
       Description: "Talking about how we can save the Ocean"
@@ -53,7 +52,7 @@ Episodes:
       GUID: "bd3afbc0-2df7-4e3c-b7f6-2196acb72d3c"
       Image: "https://www.wallpapertip.com/wmimgs/78-782499_beautiful-waterfall-hd-wallpaper-nature-wallpapers-beautiful-waterfall.jpg"
       Link: "http://www.mypodcast.com/episode-one.html"
-      PublishDate: "Wed, 21 Jun 2021 19:00:00 GMT."
+      PublishDate: "Wed, 3 Feb 2021 19:00:00 GMT"
     Required: 
       Enclosure: 
         Length: "5652889"
@@ -63,5 +62,5 @@ Episodes:
     Situational: 
       Block: "no"
       EpisodeNumber: 2
-      EpisodeType: "Full"
+      EpisodeType: "full"
       Season: 1

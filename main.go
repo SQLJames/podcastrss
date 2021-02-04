@@ -43,6 +43,7 @@ type RecommendedEpisodeDetails struct {
 	Link        string `yaml:"Link"`
 	Image       string `yaml:"Image"`
 	Explicit    string `yaml:"Explicit"`
+	Description string `yaml:"Description"`
 }
 
 // SituationalEpisodeDetails Situational details about the episode
@@ -57,6 +58,7 @@ type SituationalEpisodeDetails struct {
 type Episode struct {
 	Required    RequiredEpisodeDetails    `yaml:"Required"`
 	Recommended RecommendedEpisodeDetails `yaml:"Recommended"`
+	Situational SituationalEpisodeDetails `yaml:"Situational"`
 }
 
 // WebDetail the details about how the url RSS will be hosted
