@@ -1,7 +1,6 @@
-package main
+package podcastrss
 
 import (
-	"flag"
 	"io/ioutil"
 	"log"
 	"path/filepath"
@@ -112,11 +111,11 @@ type OwnerDetails struct {
 	Email string `yaml:"Email"`
 }
 
-func main() {
-	var Config string
-	flag.StringVar(&Config, "f", "./config/config.yaml", "YAML file to parse.")
-	flag.Parse()
-	ProgramConfiguration, err := initializeConfig(Config)
+//CreateRSS creates Feed based off the provided config
+func CreateRSS(ConfigLocation string) {
+	//flag.StringVar(&Config, "f", "./config/config.yaml", "YAML file to parse.")
+	//flag.Parse()
+	ProgramConfiguration, err := initializeConfig(ConfigLocation)
 	if err != nil {
 		log.Fatal(err)
 	}
